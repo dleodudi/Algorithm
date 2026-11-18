@@ -3,9 +3,13 @@ import Foundation
 func solution(_ strArr:[String]) -> Int {
     var dict: [Int: Int] = [:]
     
-    for i in 0...(strArr.count - 1) {
-        let count = strArr[i].count
-        dict[count, default: 0] += 1
+    // for i in 0...(strArr.count - 1) {
+    //     let count = strArr[i].count
+    //     dict[count, default: 0] += 1
+    // }
+    
+    for str in strArr {
+        dict[str.count, default: 0] += 1
     }
     
     var maxStrCnt = 0
