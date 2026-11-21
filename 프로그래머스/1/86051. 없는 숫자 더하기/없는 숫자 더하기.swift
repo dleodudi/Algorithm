@@ -1,13 +1,15 @@
 import Foundation
 
 func solution(_ numbers:[Int]) -> Int {
-    var sum: Int = 0
+//     var sum: Int = 0
     
-    for i in 0...9 {
-        if !numbers.contains(i) {
-            sum += i
-        }
-    }
+//     for i in 0...9 {
+//         if !numbers.contains(i) {
+//             sum += i
+//         }
+//     }
     
-    return sum
+//     return sum
+    
+    return 45 - numbers.reduce(0, +)
 }
