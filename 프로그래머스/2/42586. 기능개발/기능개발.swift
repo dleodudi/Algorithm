@@ -2,12 +2,16 @@ import Foundation
 
 func solution(_ progresses:[Int], _ speeds:[Int]) -> [Int] {
     var days: [Int] = []
-        
+
     for i in 0...(progresses.count - 1) {
-    let remaining = 100 - progresses[i]
+        let remaining = 100 - progresses[i]
         let speed = speeds[i]
 
-        let day = (remaining + speed - 1) / speed
+        // let day = (remaining + speed - 1) / speed
+        var day = remaining / speed
+        if remaining % speed != 0 {
+            day += 1
+        }
 
         days.append(day)
     }
