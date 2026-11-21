@@ -5,6 +5,8 @@ func solution(_ s:String) -> Int{
         
     for i in s {
         if stack.last == i {
+            // popLast() -> 빈 배열 안전하게 처리하므로 Optional 반환
+            // removeLiast -> 배열이 비어있지 않다는 전제에서 동작
             // _ = stack.popLast()
             stack.removeLast()
         } else {
